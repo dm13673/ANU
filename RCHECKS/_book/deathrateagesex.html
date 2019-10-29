@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HMD Diagnostics</title>
+  <meta name="description" content="This is a bookdown::gitbook document containing the Diagnostic graphs for an HMD country The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="HMD Diagnostics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a bookdown::gitbook document containing the Diagnostic graphs for an HMD country The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="HMD Diagnostics" />
+  
+  <meta name="twitter:description" content="This is a bookdown::gitbook document containing the Diagnostic graphs for an HMD country The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Team HMD">
+
+
+<meta name="date" content="2019-03-18">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="intconpopagesex.html">
+<link rel="next" href="deathratetimesex.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li style="display: block; padding-left: 5px; padding-right: 5px; padding-top: 5px;">
+  <a href="./">
+    <img src="HMD_logo.png" height="20" style="border: 0; float: left; margin-right: 15px">
+    HMD Diagnostic Checks
+  </a>
+</li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="general-rawpop.html"><a href="general-rawpop.html"><i class="fa fa-check"></i><b>1</b> Raw Population Counts</a><ul>
+<li class="chapter" data-level="1.1" data-path="general-rawpop.html"><a href="general-rawpop.html#females"><i class="fa fa-check"></i><b>1.1</b> Females</a></li>
+<li class="chapter" data-level="1.2" data-path="general-rawpop.html"><a href="general-rawpop.html#males"><i class="fa fa-check"></i><b>1.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rawdeath.html"><a href="rawdeath.html"><i class="fa fa-check"></i><b>2</b> Raw Deaths Lexis Diagram</a><ul>
+<li class="chapter" data-level="2.1" data-path="rawdeath.html"><a href="rawdeath.html#females-1"><i class="fa fa-check"></i><b>2.1</b> Females</a></li>
+<li class="chapter" data-level="2.2" data-path="rawdeath.html"><a href="rawdeath.html#males-1"><i class="fa fa-check"></i><b>2.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="generallexis.html"><a href="generallexis.html"><i class="fa fa-check"></i><b>3</b> Lexis Map of Lexis database (LDB) by calendar year, age, and sex</a><ul>
+<li class="chapter" data-level="3.1" data-path="generallexis.html"><a href="generallexis.html#females-2"><i class="fa fa-check"></i><b>3.1</b> Females</a></li>
+<li class="chapter" data-level="3.2" data-path="generallexis.html"><a href="generallexis.html#males-2"><i class="fa fa-check"></i><b>3.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="mortalitydeviations.html"><a href="mortalitydeviations.html"><i class="fa fa-check"></i><b>4</b> Deviations from smoothed deaths</a></li>
+<li class="chapter" data-level="5" data-path="totaldeaths.html"><a href="totaldeaths.html"><i class="fa fa-check"></i><b>5</b> Total deaths by sex</a><ul>
+<li class="chapter" data-level="5.1" data-path="totaldeaths.html"><a href="totaldeaths.html#females-3"><i class="fa fa-check"></i><b>5.1</b> Females</a></li>
+<li class="chapter" data-level="5.2" data-path="totaldeaths.html"><a href="totaldeaths.html#males-3"><i class="fa fa-check"></i><b>5.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="totalpop.html"><a href="totalpop.html"><i class="fa fa-check"></i><b>6</b> Total population by sex</a><ul>
+<li class="chapter" data-level="6.1" data-path="totalpop.html"><a href="totalpop.html#females-4"><i class="fa fa-check"></i><b>6.1</b> Females</a></li>
+<li class="chapter" data-level="6.2" data-path="totalpop.html"><a href="totalpop.html#males-4"><i class="fa fa-check"></i><b>6.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html"><i class="fa fa-check"></i><b>7</b> Internal Consistency: deaths by age and sex</a><ul>
+<li class="chapter" data-level="7.1" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#females-5"><i class="fa fa-check"></i><b>7.1</b> Females</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-0-4"><i class="fa fa-check"></i><b>7.1.1</b> Age 0-4</a></li>
+<li class="chapter" data-level="7.1.2" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-5-64"><i class="fa fa-check"></i><b>7.1.2</b> Age 5-64</a></li>
+<li class="chapter" data-level="7.1.3" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-65"><i class="fa fa-check"></i><b>7.1.3</b> Age 65+</a></li>
+<li class="chapter" data-level="7.1.4" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-85"><i class="fa fa-check"></i><b>7.1.4</b> Age 85+</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#males-5"><i class="fa fa-check"></i><b>7.2</b> Males</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-0-4-1"><i class="fa fa-check"></i><b>7.2.1</b> Age 0-4</a></li>
+<li class="chapter" data-level="7.2.2" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-5-64-1"><i class="fa fa-check"></i><b>7.2.2</b> Age 5-64</a></li>
+<li class="chapter" data-level="7.2.3" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-65-1"><i class="fa fa-check"></i><b>7.2.3</b> Age 65+</a></li>
+<li class="chapter" data-level="7.2.4" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-85-1"><i class="fa fa-check"></i><b>7.2.4</b> Age 85+</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="intconpopagesex.html"><a href="intconpopagesex.html"><i class="fa fa-check"></i><b>8</b> Internal consistency: population by age and sex</a><ul>
+<li class="chapter" data-level="8.1" data-path="intconpopagesex.html"><a href="intconpopagesex.html#females-6"><i class="fa fa-check"></i><b>8.1</b> Females</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-0-4-2"><i class="fa fa-check"></i><b>8.1.1</b> Age 0-4</a></li>
+<li class="chapter" data-level="8.1.2" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-5-64-2"><i class="fa fa-check"></i><b>8.1.2</b> Age 5-64</a></li>
+<li class="chapter" data-level="8.1.3" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-65-2"><i class="fa fa-check"></i><b>8.1.3</b> Age 65+</a></li>
+<li class="chapter" data-level="8.1.4" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-85-2"><i class="fa fa-check"></i><b>8.1.4</b> Age 85+</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="intconpopagesex.html"><a href="intconpopagesex.html#males-6"><i class="fa fa-check"></i><b>8.2</b> Males</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-0-4-3"><i class="fa fa-check"></i><b>8.2.1</b> Age 0-4</a></li>
+<li class="chapter" data-level="8.2.2" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-5-64-3"><i class="fa fa-check"></i><b>8.2.2</b> Age 5-64</a></li>
+<li class="chapter" data-level="8.2.3" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-65-3"><i class="fa fa-check"></i><b>8.2.3</b> Age 65+</a></li>
+<li class="chapter" data-level="8.2.4" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-85-3"><i class="fa fa-check"></i><b>8.2.4</b> Age 85+</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="deathrateagesex.html"><a href="deathrateagesex.html"><i class="fa fa-check"></i><b>9</b> Death rates by age and sex</a></li>
+<li class="chapter" data-level="10" data-path="deathratetimesex.html"><a href="deathratetimesex.html"><i class="fa fa-check"></i><b>10</b> Death rates over time by sex</a></li>
+<li class="chapter" data-level="11" data-path="mortdevageyear.html"><a href="mortdevageyear.html"><i class="fa fa-check"></i><b>11</b> Mortality deviation compared with adjacent ages, years</a><ul>
+<li class="chapter" data-level="11.1" data-path="mortdevageyear.html"><a href="mortdevageyear.html#females-7"><i class="fa fa-check"></i><b>11.1</b> Females</a></li>
+<li class="chapter" data-level="11.2" data-path="mortdevageyear.html"><a href="mortdevageyear.html#males-7"><i class="fa fa-check"></i><b>11.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="netmig.html"><a href="netmig.html"><i class="fa fa-check"></i><b>12</b> Internal Plausibility: Lexis Map of Net Migration</a><ul>
+<li class="chapter" data-level="12.1" data-path="netmig.html"><a href="netmig.html#females-8"><i class="fa fa-check"></i><b>12.1</b> Females</a></li>
+<li class="chapter" data-level="12.2" data-path="netmig.html"><a href="netmig.html#males-8"><i class="fa fa-check"></i><b>12.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="impliedmig.html"><a href="impliedmig.html"><i class="fa fa-check"></i><b>13</b> External Plausibility: Implied migration</a></li>
+<li class="chapter" data-level="14" data-path="lifeswe.html"><a href="lifeswe.html"><i class="fa fa-check"></i><b>14</b> Life expectancy (<span class="math inline">\(e_x\)</span>) over time</a><ul>
+<li class="chapter" data-level="14.1" data-path="lifeswe.html"><a href="lifeswe.html#females-9"><i class="fa fa-check"></i><b>14.1</b> Females</a></li>
+<li class="chapter" data-level="14.2" data-path="lifeswe.html"><a href="lifeswe.html#males-9"><i class="fa fa-check"></i><b>14.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="newoldmortrate.html"><a href="newoldmortrate.html"><i class="fa fa-check"></i><b>15</b> Internal consistency: ratio of new to old mortality rates</a><ul>
+<li class="chapter" data-level="15.1" data-path="newoldmortrate.html"><a href="newoldmortrate.html#females-10"><i class="fa fa-check"></i><b>15.1</b> Females</a><ul>
+<li class="chapter" data-level="15.1.1" data-path="newoldmortrate.html"><a href="newoldmortrate.html#unadjusted-rates"><i class="fa fa-check"></i><b>15.1.1</b> Unadjusted rates</a></li>
+<li class="chapter" data-level="15.1.2" data-path="newoldmortrate.html"><a href="newoldmortrate.html#adjusted-rates"><i class="fa fa-check"></i><b>15.1.2</b> Adjusted rates</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="newoldmortrate.html"><a href="newoldmortrate.html#males-10"><i class="fa fa-check"></i><b>15.2</b> Males</a><ul>
+<li class="chapter" data-level="15.2.1" data-path="newoldmortrate.html"><a href="newoldmortrate.html#unadjusted-rates-1"><i class="fa fa-check"></i><b>15.2.1</b> Unadjusted rates</a></li>
+<li class="chapter" data-level="15.2.2" data-path="newoldmortrate.html"><a href="newoldmortrate.html#adjusted-rates-1"><i class="fa fa-check"></i><b>15.2.2</b> Adjusted rates</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="newolddeath.html"><a href="newolddeath.html"><i class="fa fa-check"></i><b>16</b> Internal consistency: ratio of new to old deaths</a><ul>
+<li class="chapter" data-level="16.1" data-path="newolddeath.html"><a href="newolddeath.html#females-11"><i class="fa fa-check"></i><b>16.1</b> Females</a></li>
+<li class="chapter" data-level="16.2" data-path="newolddeath.html"><a href="newolddeath.html#males-11"><i class="fa fa-check"></i><b>16.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="newoldpop.html"><a href="newoldpop.html"><i class="fa fa-check"></i><b>17</b> Internal consistency: ratio of new to old population</a><ul>
+<li class="chapter" data-level="17.1" data-path="newoldpop.html"><a href="newoldpop.html#females-12"><i class="fa fa-check"></i><b>17.1</b> Females</a></li>
+<li class="chapter" data-level="17.2" data-path="newoldpop.html"><a href="newoldpop.html#males-12"><i class="fa fa-check"></i><b>17.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="mortsexratio.html"><a href="mortsexratio.html"><i class="fa fa-check"></i><b>18</b> Mortality sex ratios</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">HMD Diagnostics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="deathrateagesex" class="section level1">
+<h1><span class="header-section-number">9</span> Death rates by age and sex</h1>
+<p>Chart of death rates by age and sex for each year (based on mltper_1x1.csv/fltper_1x1.csv located in output directory for country)</p>
+<!-- <link rel="stylesheet" href="https://www.mortality.org/Public/sashmd.css" type="text/css"></link> -->
+<script type="text/javascript" src="https://www.mortality.org/Public/slideshow.js"></script>
+<script type="text/javascript">
+<!--
+SLIDES = new slideshow("SLIDES");
+// For a self-running slideshow you can set the delay between slides.
+// 3000 = 3 seconds
+SLIDES.timeout = 500;
+// By default, all of the slideshow images are prefetched.
+// You can set the prefetch variable if you have a large number
+// of slides.
+SLIDES.prefetch = 1;
+// By default the slideshow will repeat when you get to the end.
+// If this is set to false though, the controls do not work!!!
+// SLIDES.repeat = false;
+//-->
+
+
+
+s = new slide();
+s.src  = "intpls_deathratesY1921.png";
+s.link = "intpls_deathratesY1921.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1922.png";
+s.link = "intpls_deathratesY1922.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1923.png";
+s.link = "intpls_deathratesY1923.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1924.png";
+s.link = "intpls_deathratesY1924.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1925.png";
+s.link = "intpls_deathratesY1925.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1926.png";
+s.link = "intpls_deathratesY1926.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1927.png";
+s.link = "intpls_deathratesY1927.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1928.png";
+s.link = "intpls_deathratesY1928.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1929.png";
+s.link = "intpls_deathratesY1929.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1930.png";
+s.link = "intpls_deathratesY1930.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1931.png";
+s.link = "intpls_deathratesY1931.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1932.png";
+s.link = "intpls_deathratesY1932.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1933.png";
+s.link = "intpls_deathratesY1933.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1934.png";
+s.link = "intpls_deathratesY1934.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1935.png";
+s.link = "intpls_deathratesY1935.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1936.png";
+s.link = "intpls_deathratesY1936.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1937.png";
+s.link = "intpls_deathratesY1937.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1938.png";
+s.link = "intpls_deathratesY1938.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1939.png";
+s.link = "intpls_deathratesY1939.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1940.png";
+s.link = "intpls_deathratesY1940.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1941.png";
+s.link = "intpls_deathratesY1941.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1942.png";
+s.link = "intpls_deathratesY1942.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1943.png";
+s.link = "intpls_deathratesY1943.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1944.png";
+s.link = "intpls_deathratesY1944.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1945.png";
+s.link = "intpls_deathratesY1945.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1946.png";
+s.link = "intpls_deathratesY1946.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1947.png";
+s.link = "intpls_deathratesY1947.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1948.png";
+s.link = "intpls_deathratesY1948.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1949.png";
+s.link = "intpls_deathratesY1949.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1950.png";
+s.link = "intpls_deathratesY1950.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1951.png";
+s.link = "intpls_deathratesY1951.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1952.png";
+s.link = "intpls_deathratesY1952.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1953.png";
+s.link = "intpls_deathratesY1953.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1954.png";
+s.link = "intpls_deathratesY1954.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1955.png";
+s.link = "intpls_deathratesY1955.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1956.png";
+s.link = "intpls_deathratesY1956.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1957.png";
+s.link = "intpls_deathratesY1957.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1958.png";
+s.link = "intpls_deathratesY1958.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1959.png";
+s.link = "intpls_deathratesY1959.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1960.png";
+s.link = "intpls_deathratesY1960.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1961.png";
+s.link = "intpls_deathratesY1961.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1962.png";
+s.link = "intpls_deathratesY1962.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1963.png";
+s.link = "intpls_deathratesY1963.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1964.png";
+s.link = "intpls_deathratesY1964.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1965.png";
+s.link = "intpls_deathratesY1965.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1966.png";
+s.link = "intpls_deathratesY1966.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1967.png";
+s.link = "intpls_deathratesY1967.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1968.png";
+s.link = "intpls_deathratesY1968.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1969.png";
+s.link = "intpls_deathratesY1969.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1970.png";
+s.link = "intpls_deathratesY1970.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1971.png";
+s.link = "intpls_deathratesY1971.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1972.png";
+s.link = "intpls_deathratesY1972.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1973.png";
+s.link = "intpls_deathratesY1973.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1974.png";
+s.link = "intpls_deathratesY1974.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1975.png";
+s.link = "intpls_deathratesY1975.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1976.png";
+s.link = "intpls_deathratesY1976.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1977.png";
+s.link = "intpls_deathratesY1977.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1978.png";
+s.link = "intpls_deathratesY1978.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1979.png";
+s.link = "intpls_deathratesY1979.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1980.png";
+s.link = "intpls_deathratesY1980.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1981.png";
+s.link = "intpls_deathratesY1981.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1982.png";
+s.link = "intpls_deathratesY1982.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1983.png";
+s.link = "intpls_deathratesY1983.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1984.png";
+s.link = "intpls_deathratesY1984.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1985.png";
+s.link = "intpls_deathratesY1985.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1986.png";
+s.link = "intpls_deathratesY1986.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1987.png";
+s.link = "intpls_deathratesY1987.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1988.png";
+s.link = "intpls_deathratesY1988.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1989.png";
+s.link = "intpls_deathratesY1989.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1990.png";
+s.link = "intpls_deathratesY1990.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1991.png";
+s.link = "intpls_deathratesY1991.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1992.png";
+s.link = "intpls_deathratesY1992.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1993.png";
+s.link = "intpls_deathratesY1993.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1994.png";
+s.link = "intpls_deathratesY1994.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1995.png";
+s.link = "intpls_deathratesY1995.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1996.png";
+s.link = "intpls_deathratesY1996.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1997.png";
+s.link = "intpls_deathratesY1997.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1998.png";
+s.link = "intpls_deathratesY1998.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY1999.png";
+s.link = "intpls_deathratesY1999.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2000.png";
+s.link = "intpls_deathratesY2000.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2001.png";
+s.link = "intpls_deathratesY2001.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2002.png";
+s.link = "intpls_deathratesY2002.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2003.png";
+s.link = "intpls_deathratesY2003.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2004.png";
+s.link = "intpls_deathratesY2004.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2005.png";
+s.link = "intpls_deathratesY2005.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2006.png";
+s.link = "intpls_deathratesY2006.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2007.png";
+s.link = "intpls_deathratesY2007.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2008.png";
+s.link = "intpls_deathratesY2008.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2009.png";
+s.link = "intpls_deathratesY2009.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2010.png";
+s.link = "intpls_deathratesY2010.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2011.png";
+s.link = "intpls_deathratesY2011.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2012.png";
+s.link = "intpls_deathratesY2012.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2013.png";
+s.link = "intpls_deathratesY2013.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2014.png";
+s.link = "intpls_deathratesY2014.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2015.png";
+s.link = "intpls_deathratesY2015.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);s = new slide();
+s.src  = "intpls_deathratesY2016.png";
+s.link = "intpls_deathratesY2016.png";
+s.text = "Open link in same window";
+SLIDES.add_slide(s);
+
+</script>
+<!-- <style type="text/css">  -->
+<!-- TD.nav { -->
+<!-- text-color: #000000; -->
+<!-- text-align : center; -->
+<!-- font-size : 1.8em; -->
+<!-- background-color : #FFFFFF; -->
+<!-- color : #000000; -->
+<!-- padding:0.5em; -->
+<!-- } -->
+<!-- TD.nav2 { -->
+<!-- text-align : center; -->
+<!-- font-size : 1.8em; -->
+<!-- background-color : #FFFFFF; -->
+<!-- border : solid; -->
+<!-- border-color: #FFFFFF; -->
+<!-- border-width: .1; -->
+<!-- padding:0.5em; -->
+<!-- } -->
+<!-- </style> -->
+<!-- <script> -->
+<!-- ```{r print1, echo=F, results="asis"} -->
+<!-- cat("function myFunction() {\ndocument.getElementById(\"demo\").innerHTML = \"Paragraph changed.\";\n}") -->
+<!-- ``` -->
+<!-- </script> -->
+<!-- <p id="demo">A Paragraph.</p> -->
+<!-- <button type="button" onclick="myFunction()">Try it</button> -->
+<!-- <img src="intpls_deathratesY2017.png"> -->
+<body class="center" onLoad="SLIDES.update()">
+<h3>
+Diagnostic Charts for HMD Project - Country: Australia (AUS)
+</h3>
+<h3>
+Internal plausibility - Death rates by age for each year
+</h3>
+<hr />
+<table>
+<tr>
+<td colspan="2">
+<img name="SLIDESIMG" src="intpls_deathratesY1950.png" alt="Slideshow image" />
+</td>
+</tr>
+<tr>
+<td class="nav">
+Slide Controls:<br />
+<table>
+<tr>
+<td class="nav2">
+<a href="javascript:void(0)"
+onClick="SLIDES.next();SLIDES.play();return false;">START</A>
+</td>
+<td class="nav2">
+<a href="javascript:void(0)"
+onClick="SLIDES.pause();return false;">STOP</A>
+</td>
+<td class="nav2">
+<a href="javascript:void(0)"
+onClick="SLIDES.hotlink();return false;">VIEW</A>
+</td>
+<td class="nav2">
+<a href="javascript:void(0)"
+onClick="SLIDES.previous();return false;">PREVIOUS</A>
+</td>
+<td class="nav2">
+<a href="javascript:void(0)"
+onClick="SLIDES.next();return false;">NEXT</A>
+</td>
+</tr>
+</table>
+</td>
+<td class="nav">
+Delay (Seconds): <br />
+<table>
+<tr>
+<td class="nav2">
+<a href="javascript:void(0)"
+onClick="SLIDES.timeout=500;">0.25</A>
+</td>
+<td class="nav2">
+<a href="javascript:void(0)"
+onClick="SLIDES.timeout=500;">0.5</A>
+</td>
+<td class="nav2">
+<a href="javascript:void(0)"
+onClick="SLIDES.timeout=1000;">1</A>
+</td>
+<td class="nav2">
+<a href="javascript:void(0)"
+onClick="SLIDES.timeout=1500;">1.5</A>
+</td>
+<td class="nav2">
+<a href="javascript:void(0)"
+onClick="SLIDES.timeout=2000;">2</A>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="nav">
+<p>Go to year: <a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(0);return false;">1921 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(4);return false;">1925 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(9);return false;">1930 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(14);return false;">1935 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(19);return false;">1940 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(24);return false;">1945 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(29);return false;">1950 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(34);return false;">1955 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(39);return false;">1960 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(44);return false;">1965 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(49);return false;">1970 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(54);return false;">1975 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(59);return false;">1980 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(64);return false;">1985 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(69);return false;">1990 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(74);return false;">1995 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(79);return false;">2000 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(84);return false;">2005 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(89);return false;">2010 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(94);return false;">2015 </A><a href="javascript:void(0)"
+onClick="SLIDES.goto_slide(95);return false;">2016 </A></p>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+<!--
+if (document.images) {
+  SLIDES.image = document.images.SLIDESIMG;
+  SLIDES.update();
+  SLIDES.play();
+}
+//-->
+</script>
+<hr />
+<!-- <table> -->
+<!--   <tr> -->
+<!--     <td class="footerl" valign="top" width="360"><address><a href="mailto:hmd@demog.berkeley.edu">Beate Danielsen: hmd@demog.berkeley.edu</a> </address></td> -->
+<!--     <td class="footerr" valign="top" width="360"><em>Last Updated:<br />October 15, 2018 -->
+<!--         </em><br /><a href="http://validator.w3.org/check/referer"> -->
+<!--         <img height="31" alt=" [Valid XHTML 1.0!] " src="https://www.mortality.org/Public/valid-xhtml10.png"  width="88" /></a> </td> -->
+<!--   </tr> -->
+<!-- </table> -->
+</body>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intconpopagesex.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="deathratetimesex.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

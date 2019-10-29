@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HMD Diagnostics</title>
+  <meta name="description" content="This is a bookdown::gitbook document containing the Diagnostic graphs for an HMD country The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="HMD Diagnostics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a bookdown::gitbook document containing the Diagnostic graphs for an HMD country The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="HMD Diagnostics" />
+  
+  <meta name="twitter:description" content="This is a bookdown::gitbook document containing the Diagnostic graphs for an HMD country The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Team HMD">
+
+
+<meta name="date" content="2019-03-18">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="mortdevageyear.html">
+<link rel="next" href="impliedmig.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li style="display: block; padding-left: 5px; padding-right: 5px; padding-top: 5px;">
+  <a href="./">
+    <img src="HMD_logo.png" height="20" style="border: 0; float: left; margin-right: 15px">
+    HMD Diagnostic Checks
+  </a>
+</li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="general-rawpop.html"><a href="general-rawpop.html"><i class="fa fa-check"></i><b>1</b> Raw Population Counts</a><ul>
+<li class="chapter" data-level="1.1" data-path="general-rawpop.html"><a href="general-rawpop.html#females"><i class="fa fa-check"></i><b>1.1</b> Females</a></li>
+<li class="chapter" data-level="1.2" data-path="general-rawpop.html"><a href="general-rawpop.html#males"><i class="fa fa-check"></i><b>1.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rawdeath.html"><a href="rawdeath.html"><i class="fa fa-check"></i><b>2</b> Raw Deaths Lexis Diagram</a><ul>
+<li class="chapter" data-level="2.1" data-path="rawdeath.html"><a href="rawdeath.html#females-1"><i class="fa fa-check"></i><b>2.1</b> Females</a></li>
+<li class="chapter" data-level="2.2" data-path="rawdeath.html"><a href="rawdeath.html#males-1"><i class="fa fa-check"></i><b>2.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="generallexis.html"><a href="generallexis.html"><i class="fa fa-check"></i><b>3</b> Lexis Map of Lexis database (LDB) by calendar year, age, and sex</a><ul>
+<li class="chapter" data-level="3.1" data-path="generallexis.html"><a href="generallexis.html#females-2"><i class="fa fa-check"></i><b>3.1</b> Females</a></li>
+<li class="chapter" data-level="3.2" data-path="generallexis.html"><a href="generallexis.html#males-2"><i class="fa fa-check"></i><b>3.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="mortalitydeviations.html"><a href="mortalitydeviations.html"><i class="fa fa-check"></i><b>4</b> Deviations from smoothed deaths</a></li>
+<li class="chapter" data-level="5" data-path="totaldeaths.html"><a href="totaldeaths.html"><i class="fa fa-check"></i><b>5</b> Total deaths by sex</a><ul>
+<li class="chapter" data-level="5.1" data-path="totaldeaths.html"><a href="totaldeaths.html#females-3"><i class="fa fa-check"></i><b>5.1</b> Females</a></li>
+<li class="chapter" data-level="5.2" data-path="totaldeaths.html"><a href="totaldeaths.html#males-3"><i class="fa fa-check"></i><b>5.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="totalpop.html"><a href="totalpop.html"><i class="fa fa-check"></i><b>6</b> Total population by sex</a><ul>
+<li class="chapter" data-level="6.1" data-path="totalpop.html"><a href="totalpop.html#females-4"><i class="fa fa-check"></i><b>6.1</b> Females</a></li>
+<li class="chapter" data-level="6.2" data-path="totalpop.html"><a href="totalpop.html#males-4"><i class="fa fa-check"></i><b>6.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html"><i class="fa fa-check"></i><b>7</b> Internal Consistency: deaths by age and sex</a><ul>
+<li class="chapter" data-level="7.1" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#females-5"><i class="fa fa-check"></i><b>7.1</b> Females</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-0-4"><i class="fa fa-check"></i><b>7.1.1</b> Age 0-4</a></li>
+<li class="chapter" data-level="7.1.2" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-5-64"><i class="fa fa-check"></i><b>7.1.2</b> Age 5-64</a></li>
+<li class="chapter" data-level="7.1.3" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-65"><i class="fa fa-check"></i><b>7.1.3</b> Age 65+</a></li>
+<li class="chapter" data-level="7.1.4" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-85"><i class="fa fa-check"></i><b>7.1.4</b> Age 85+</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#males-5"><i class="fa fa-check"></i><b>7.2</b> Males</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-0-4-1"><i class="fa fa-check"></i><b>7.2.1</b> Age 0-4</a></li>
+<li class="chapter" data-level="7.2.2" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-5-64-1"><i class="fa fa-check"></i><b>7.2.2</b> Age 5-64</a></li>
+<li class="chapter" data-level="7.2.3" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-65-1"><i class="fa fa-check"></i><b>7.2.3</b> Age 65+</a></li>
+<li class="chapter" data-level="7.2.4" data-path="intcondeathagesex.html"><a href="intcondeathagesex.html#age-85-1"><i class="fa fa-check"></i><b>7.2.4</b> Age 85+</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="intconpopagesex.html"><a href="intconpopagesex.html"><i class="fa fa-check"></i><b>8</b> Internal consistency: population by age and sex</a><ul>
+<li class="chapter" data-level="8.1" data-path="intconpopagesex.html"><a href="intconpopagesex.html#females-6"><i class="fa fa-check"></i><b>8.1</b> Females</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-0-4-2"><i class="fa fa-check"></i><b>8.1.1</b> Age 0-4</a></li>
+<li class="chapter" data-level="8.1.2" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-5-64-2"><i class="fa fa-check"></i><b>8.1.2</b> Age 5-64</a></li>
+<li class="chapter" data-level="8.1.3" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-65-2"><i class="fa fa-check"></i><b>8.1.3</b> Age 65+</a></li>
+<li class="chapter" data-level="8.1.4" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-85-2"><i class="fa fa-check"></i><b>8.1.4</b> Age 85+</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="intconpopagesex.html"><a href="intconpopagesex.html#males-6"><i class="fa fa-check"></i><b>8.2</b> Males</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-0-4-3"><i class="fa fa-check"></i><b>8.2.1</b> Age 0-4</a></li>
+<li class="chapter" data-level="8.2.2" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-5-64-3"><i class="fa fa-check"></i><b>8.2.2</b> Age 5-64</a></li>
+<li class="chapter" data-level="8.2.3" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-65-3"><i class="fa fa-check"></i><b>8.2.3</b> Age 65+</a></li>
+<li class="chapter" data-level="8.2.4" data-path="intconpopagesex.html"><a href="intconpopagesex.html#age-85-3"><i class="fa fa-check"></i><b>8.2.4</b> Age 85+</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="deathrateagesex.html"><a href="deathrateagesex.html"><i class="fa fa-check"></i><b>9</b> Death rates by age and sex</a></li>
+<li class="chapter" data-level="10" data-path="deathratetimesex.html"><a href="deathratetimesex.html"><i class="fa fa-check"></i><b>10</b> Death rates over time by sex</a></li>
+<li class="chapter" data-level="11" data-path="mortdevageyear.html"><a href="mortdevageyear.html"><i class="fa fa-check"></i><b>11</b> Mortality deviation compared with adjacent ages, years</a><ul>
+<li class="chapter" data-level="11.1" data-path="mortdevageyear.html"><a href="mortdevageyear.html#females-7"><i class="fa fa-check"></i><b>11.1</b> Females</a></li>
+<li class="chapter" data-level="11.2" data-path="mortdevageyear.html"><a href="mortdevageyear.html#males-7"><i class="fa fa-check"></i><b>11.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="netmig.html"><a href="netmig.html"><i class="fa fa-check"></i><b>12</b> Internal Plausibility: Lexis Map of Net Migration</a><ul>
+<li class="chapter" data-level="12.1" data-path="netmig.html"><a href="netmig.html#females-8"><i class="fa fa-check"></i><b>12.1</b> Females</a></li>
+<li class="chapter" data-level="12.2" data-path="netmig.html"><a href="netmig.html#males-8"><i class="fa fa-check"></i><b>12.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="impliedmig.html"><a href="impliedmig.html"><i class="fa fa-check"></i><b>13</b> External Plausibility: Implied migration</a></li>
+<li class="chapter" data-level="14" data-path="lifeswe.html"><a href="lifeswe.html"><i class="fa fa-check"></i><b>14</b> Life expectancy (<span class="math inline">\(e_x\)</span>) over time</a><ul>
+<li class="chapter" data-level="14.1" data-path="lifeswe.html"><a href="lifeswe.html#females-9"><i class="fa fa-check"></i><b>14.1</b> Females</a></li>
+<li class="chapter" data-level="14.2" data-path="lifeswe.html"><a href="lifeswe.html#males-9"><i class="fa fa-check"></i><b>14.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="newoldmortrate.html"><a href="newoldmortrate.html"><i class="fa fa-check"></i><b>15</b> Internal consistency: ratio of new to old mortality rates</a><ul>
+<li class="chapter" data-level="15.1" data-path="newoldmortrate.html"><a href="newoldmortrate.html#females-10"><i class="fa fa-check"></i><b>15.1</b> Females</a><ul>
+<li class="chapter" data-level="15.1.1" data-path="newoldmortrate.html"><a href="newoldmortrate.html#unadjusted-rates"><i class="fa fa-check"></i><b>15.1.1</b> Unadjusted rates</a></li>
+<li class="chapter" data-level="15.1.2" data-path="newoldmortrate.html"><a href="newoldmortrate.html#adjusted-rates"><i class="fa fa-check"></i><b>15.1.2</b> Adjusted rates</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="newoldmortrate.html"><a href="newoldmortrate.html#males-10"><i class="fa fa-check"></i><b>15.2</b> Males</a><ul>
+<li class="chapter" data-level="15.2.1" data-path="newoldmortrate.html"><a href="newoldmortrate.html#unadjusted-rates-1"><i class="fa fa-check"></i><b>15.2.1</b> Unadjusted rates</a></li>
+<li class="chapter" data-level="15.2.2" data-path="newoldmortrate.html"><a href="newoldmortrate.html#adjusted-rates-1"><i class="fa fa-check"></i><b>15.2.2</b> Adjusted rates</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="newolddeath.html"><a href="newolddeath.html"><i class="fa fa-check"></i><b>16</b> Internal consistency: ratio of new to old deaths</a><ul>
+<li class="chapter" data-level="16.1" data-path="newolddeath.html"><a href="newolddeath.html#females-11"><i class="fa fa-check"></i><b>16.1</b> Females</a></li>
+<li class="chapter" data-level="16.2" data-path="newolddeath.html"><a href="newolddeath.html#males-11"><i class="fa fa-check"></i><b>16.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="newoldpop.html"><a href="newoldpop.html"><i class="fa fa-check"></i><b>17</b> Internal consistency: ratio of new to old population</a><ul>
+<li class="chapter" data-level="17.1" data-path="newoldpop.html"><a href="newoldpop.html#females-12"><i class="fa fa-check"></i><b>17.1</b> Females</a></li>
+<li class="chapter" data-level="17.2" data-path="newoldpop.html"><a href="newoldpop.html#males-12"><i class="fa fa-check"></i><b>17.2</b> Males</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="mortsexratio.html"><a href="mortsexratio.html"><i class="fa fa-check"></i><b>18</b> Mortality sex ratios</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">HMD Diagnostics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="netmig" class="section level1">
+<h1><span class="header-section-number">12</span> Internal Plausibility: Lexis Map of Net Migration</h1>
+<p>Migration patterns should make sense. Should not show net migration above age 80 (unless there are territorial changes).</p>
+<div id="females-8" class="section level2">
+<h2><span class="header-section-number">12.1</span> Females</h2>
+<div class="figure" style="text-align: center"><span id="fig:plotIntplsNetmigrationF"></span>
+<img src="_main_files/figure-html/plotIntplsNetmigrationF-1.png" alt="Lexis Map of Net Migration" width="1152" />
+<p class="caption">
+Figure 12.1: Lexis Map of Net Migration
+</p>
+</div>
+</div>
+<div id="males-8" class="section level2">
+<h2><span class="header-section-number">12.2</span> Males</h2>
+<div class="figure" style="text-align: center"><span id="fig:plotIntplsNetmigrationM"></span>
+<img src="_main_files/figure-html/plotIntplsNetmigrationM-1.png" alt="Lexis Map of Net Migration" width="1152" />
+<p class="caption">
+Figure 12.2: Lexis Map of Net Migration
+</p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="mortdevageyear.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="impliedmig.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

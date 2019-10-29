@@ -1,0 +1,9 @@
+base
+ggplot2
+data.table
+roxygen2
+devtools
+plyr
+bookdown
+HMDDiag
+HMDLexis
